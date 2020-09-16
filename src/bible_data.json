@@ -1,0 +1,333 @@
+[{
+    "books": [{
+        "Name": "Genesis",
+        "Chapters": 50
+        }
+        , 
+        {       
+        "Name": "Exodus",
+        "Chapters": 40
+        }
+        , 
+        {       
+        "Name": "Leviticus",
+        "Chapters": 27
+        }
+        , 
+        {       
+        "Name": "Numbers",
+        "Chapters": 36
+        }
+        , 
+        {       
+        "Name": "Deuteronomy",
+        "Chapters": 34
+        }
+        , 
+        {       
+        "Name": "Joshua",
+        "Chapters": 24
+        }
+        , 
+        {       
+        "Name": "Judges",
+        "Chapters": 21
+        }
+        , 
+        {       
+        "Name": "Ruth",
+        "Chapters": 4
+        }
+        , 
+        {       
+        "Name": "1 Samuel",
+        "Chapters": 31
+        }
+        , 
+        {       
+        "Name": "2 Samuel",
+        "Chapters": 24
+        }
+        , 
+        {       
+        "Name": "1 Kings",
+        "Chapters": 22
+        }
+        , 
+        {       
+        "Name": "2 Kings",
+        "Chapters": 25
+        }
+        , 
+        {       
+        "Name": "1 Chronicles",
+        "Chapters": 29
+        }
+        , 
+        {       
+        "Name": "2 Chronicles",
+        "Chapters": 36
+        }
+        , 
+        {       
+        "Name": "Ezra",
+        "Chapters": 10
+        }
+        , 
+        {       
+        "Name": "Nehemiah",
+        "Chapters": 13
+        }
+        , 
+        {       
+        "Name": "Esther",
+        "Chapters": 10
+        }
+        , 
+        {       
+        "Name": "Job",
+        "Chapters": 42
+        }
+        , 
+        {       
+        "Name": "Psalms",
+        "Chapters": 150
+        }
+        , 
+        {       
+        "Name": "Proverbs",
+        "Chapters": 31
+        }
+        , 
+        {       
+        "Name": "Ecclesiastes",
+        "Chapters": 12
+        }
+        , 
+        {       
+        "Name": "Song of Solomon",
+        "Chapters": 8
+        }
+        , 
+        {       
+        "Name": "Isaiah",
+        "Chapters": 66
+        }
+        , 
+        {       
+        "Name": "Jeremiah",
+        "Chapters": 52
+        }
+        , 
+        {       
+        "Name": "Lamentations",
+        "Chapters": 5
+        }
+        , 
+        {       
+        "Name": "Ezekiel",
+        "Chapters": 48
+        }
+        , 
+        {       
+        "Name": "Daniel",
+        "Chapters": 12
+        }
+        , 
+        {       
+        "Name": "Hosea",
+        "Chapters": 14
+        }
+        , 
+        {       
+        "Name": "Joel",
+        "Chapters": 3
+        }
+        , 
+        {       
+        "Name": "Amos",
+        "Chapters": 9
+        }
+        , 
+        {       
+        "Name": "Obadiah",
+        "Chapters": 1
+        }
+        , 
+        {       
+        "Name": "Jonah",
+        "Chapters": 4
+        }
+        , 
+        {       
+        "Name": "Micah",
+        "Chapters": 7
+        }
+        , 
+        {       
+        "Name": "Nahum",
+        "Chapters": 3
+        }
+        , 
+        {       
+        "Name": "Habukkuk",
+        "Chapters": 3
+        }
+        , 
+        {       
+        "Name": "Zephaniah",
+        "Chapters": 3
+        }
+        , 
+        {       
+        "Name": "Haggai",
+        "Chapters": 2
+        }
+        , 
+        {       
+        "Name": "Zechariah",
+        "Chapters": 14
+        }
+        , 
+        {       
+        "Name": "Malachi",
+        "Chapters": 4
+        }
+        , 
+        {       
+        "Name": "Matthew",
+        "Chapters": 28
+        }
+        , 
+        {       
+        "Name": "Mark",
+        "Chapters": 16
+        }
+        , 
+        {       
+        "Name": "Luke",
+        "Chapters": 24
+        }
+        , 
+        {       
+        "Name": "John",
+        "Chapters": 21
+        }
+        , 
+        {       
+        "Name": "Acts",
+        "Chapters": 28
+        }
+        , 
+        {       
+        "Name": "Romans",
+        "Chapters": 16
+        }
+        , 
+        {       
+        "Name": "1 Corinthians",
+        "Chapters": 16
+        }
+        , 
+        {       
+        "Name": "2 Corinthians",
+        "Chapters": 13
+        }
+        , 
+        {       
+        "Name": "Galatians",
+        "Chapters": 6
+        }
+        , 
+        {       
+        "Name": "Ephesians",
+        "Chapters": 6
+        }
+        , 
+        {       
+        "Name": "Philippians",
+        "Chapters": 4
+        }
+        , 
+        {       
+        "Name": "Colossians",
+        "Chapters": 4
+        }
+        , 
+        {       
+        "Name": "1 Thessalonians",
+        "Chapters": 5
+        }
+        , 
+        {       
+        "Name": "2 Thessalonians",
+        "Chapters": 3
+        }
+        , 
+        {       
+        "Name": "1 Timothy",
+        "Chapters": 6
+        }
+        , 
+        {       
+        "Name": "2 Timothy",
+        "Chapters": 4
+        }
+        , 
+        {       
+        "Name": "Titus",
+        "Chapters": 3
+        }
+        , 
+        {       
+        "Name": "Philemon",
+        "Chapters": 1
+        }
+        , 
+        {       
+        "Name": "Hebrews",
+        "Chapters": 13
+        }
+        , 
+        {       
+        "Name": "James",
+        "Chapters": 5
+        }
+        , 
+        {       
+        "Name": "1 Peter",
+        "Chapters": 5
+        }
+        , 
+        {       
+        "Name": "2 Peter",
+        "Chapters": 3
+        }
+        , 
+        {       
+        "Name": "1 John",
+        "Chapters": 5
+        }
+        , 
+        {       
+        "Name": "2 John",
+        "Chapters": 1
+        }
+        , 
+        {       
+        "Name": "3 John",
+        "Chapters": 1
+        }
+        , 
+        {       
+        "Name": "Jude",
+        "Chapters": 1
+        }
+        , 
+        {       
+        "Name": "Revelation",
+        "Chapters": 22
+        }
+    ]
+}
+]

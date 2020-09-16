@@ -1,0 +1,15 @@
+{
+  "name": "search-the-ESV",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "buefy": "^0.9.3",
+    "gridsome": "^0.7.0",
+    "vue-axios": "^2.1.5"
+  }
+}
