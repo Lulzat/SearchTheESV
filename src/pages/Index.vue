@@ -131,7 +131,7 @@
         Vue.axios.get(
           api, {
             headers: {
-              'Authorization': process.env.ESV_API_TOKEN
+              'Authorization': `Token cbd26d0652943136cfa0ecb6e7a09edb9e3bd3a5`
             }
           }).then(response => {
           this.data = response.data
@@ -145,7 +145,7 @@
         axios.get(`
     https://api.esv.org/v3/passage/html/?q=${this.next_chapter}`, {
           headers: {
-            'Authorization': process.env.ESV_API_TOKEN
+            'Authorization': `Token cbd26d0652943136cfa0ecb6e7a09edb9e3bd3a5`
           },
           params: {
             'include-footnotes': false,
@@ -170,7 +170,7 @@
         axios.get(`
         https://api.esv.org/v3/passage/html/?q=${bookQuery}`, {
           headers: {
-            'Authorization': process.env.ESV_API_TOKEN
+            'Authorization': `Token cbd26d0652943136cfa0ecb6e7a09edb9e3bd3a5`
           },
           params: {
             'include-footnotes': false,
