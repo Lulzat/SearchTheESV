@@ -5,7 +5,7 @@ module.exports = function (api) {
     const { data } = await axios.get(`
     https://api.esv.org/v3/passage/html/?q=gen1`, {
         headers: {
-          'Authorization': `Token cbd26d0652943136cfa0ecb6e7a09edb9e3bd3a5`
+          'Authorization': process.env.ESV_API_TOKEN
         },
         params: {
           'include-footnotes': false,
