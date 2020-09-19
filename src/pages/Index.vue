@@ -16,7 +16,7 @@
       <!-- Search Bar -->
       <form @submit.prevent="search">
         <b-field>
-          <b-input v-model="passage" placeholder="Search..." type="search" icon="magnify" icon-clickable
+          <b-input v-model.lazy="passage" placeholder="Search..." type="search" icon="magnify" icon-clickable
             @icon-click="searchIconClick">
           </b-input>
         </b-field>
@@ -44,13 +44,19 @@
       </div>
 
       <!-- Navigation -->
-      <div v-for="book in $page.allBibleBooks.edges[0].node.books" :key="book.Name">
-        <b-navbar-dropdown :label="book.Name">
-          <b-navbar-item v-for="n in book.Chapters">
-            <b-button v-on:click="getBookChapter(book.Name, n)" type="is-primary" outlined>Chapter {{ n }}
-            </b-button>
-          </b-navbar-item>
-        </b-navbar-dropdown>
+      <div class="container">
+        <div class="row">
+          <div v-for="book in $page.allBibleBooks.edges[0].node.books" :key="book.Name">
+            <b-navbar-dropdown :label="book.Name" class="book-list col-12">
+              <ul class="d-flex flex-wrap">
+                <b-navbar-item v-for="n in book.Chapters" class="chapter-list">
+                  <li v-on:click="getBookChapter(book.Name, n)" type="is-primary" outlined class="list-group-item">{{ n }}
+                  </li>
+                </b-navbar-item>
+              </ul>
+            </b-navbar-dropdown>
+          </div>
+        </div>
       </div>
 
       <!-- Nav Results -->
@@ -131,7 +137,7 @@
         Vue.axios.get(
           api, {
             headers: {
-              'Authorization': process.env.ESV_API_TOKEN
+              'Authorization': process.env.ESV_API_KEY
             }
           }).then(response => {
           this.data = response.data
@@ -145,7 +151,7 @@
         axios.get(`
     https://api.esv.org/v3/passage/html/?q=${this.next_chapter}`, {
           headers: {
-            'Authorization': process.env.ESV_API_TOKEN
+            'Authorization': process.env.ESV_API_KEY
           },
           params: {
             'include-footnotes': false,
@@ -170,7 +176,7 @@
         axios.get(`
         https://api.esv.org/v3/passage/html/?q=${bookQuery}`, {
           headers: {
-            'Authorization': process.env.ESV_API_TOKEN
+            'Authorization': process.env.ESV_API_KEY
           },
           params: {
             'include-footnotes': false,
