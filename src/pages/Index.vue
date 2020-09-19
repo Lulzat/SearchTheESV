@@ -130,8 +130,7 @@
         Vue.axios.get(
           url).then(response => {
           console.log(response)
-          responseData = response.json()
-          this.data = responseData.data
+          this.data = response.data
         }).catch(error => {
           this.errorMsg = 'Nope.'
           this.data = []
@@ -144,8 +143,7 @@
         console.log(bookQuery) 
         axios.get(url).then(response => {
           console.log(response)
-          responseData = response.json()
-          this.dataChapter = responseData.data
+          this.dataChapter = response.data
         }).catch(error => {
           this.errorMsg = 'Nope.'
           this.dataChapter = []
