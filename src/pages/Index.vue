@@ -129,6 +129,7 @@
         console.log(this.passage)
         Vue.axios.get(
           url).then(response => {
+          console.log(response)
           this.data = response.data
         }).catch(error => {
           this.errorMsg = 'Nope.'
@@ -141,6 +142,7 @@
         const url = `/.netlify/functions/getBook?parameter=${bookQuery}`;
         console.log(bookQuery) 
         axios.get(url).then(response => {
+          console.log(response)
           this.dataChapter = response.data
         }).catch(error => {
           this.errorMsg = 'Nope.'
