@@ -129,7 +129,7 @@
         console.log(this.passage)
         Vue.axios.get(
           url).then(response => {
-          this.data = response.data
+          this.data = response.body
         }).catch(error => {
           this.errorMsg = 'Nope.'
           this.data = []
@@ -141,7 +141,7 @@
         const url = `/.netlify/functions/getBook?parameter=${bookQuery}`;
         console.log(bookQuery) 
         axios.get(url).then(response => {
-          this.dataChapter = response.data
+          this.dataChapter = response.body
         }).catch(error => {
           this.errorMsg = 'Nope.'
           this.dataChapter = []
