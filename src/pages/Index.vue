@@ -125,7 +125,7 @@
   },
     methods: {
       search() {
-        const url = `/.netlify/functions/searchPassage?parameter=${this.passage}`;
+        const url = `/.netlify/functions/searchPassage?passage=${this.passage}`;
         console.log(this.passage)
         Vue.axios.get(
           url).then(response => {
@@ -139,7 +139,7 @@
 
       getBookChapter(bookName, bookChapter) {
         const bookQuery = bookName + bookChapter;
-        const url = `/.netlify/functions/getBook?parameter=${bookQuery}`;
+        const url = `/.netlify/functions/getBook?passage=${bookQuery}`;
         console.log(bookQuery) 
         axios.get(url).then(response => {
           console.log(response)
