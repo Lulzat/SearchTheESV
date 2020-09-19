@@ -133,13 +133,9 @@
   },
     methods: {
       search() {
-        const api = `https://api.esv.org/v3/passage/text/?q=${this.passage}`
+        const url = `/.netlify/functions/searchPassage?parameter=${this.passage}`;
         Vue.axios.get(
-          api, {
-            headers: {
-              'Authorization': process.env.ESV_API_KEY
-            }
-          }).then(response => {
+          url).then(response => {
           this.data = response.data
         }).catch(error => {
           this.errorMsg = 'Nope.'
@@ -147,43 +143,11 @@
         })
       },
 
-      getNextChapter() {
-        axios.get(`
-    https://api.esv.org/v3/passage/html/?q=${this.next_chapter}`, {
-          headers: {
-            'Authorization': process.env.ESV_API_KEY
-          },
-          params: {
-            'include-footnotes': false,
-            'include-footnote-body': false,
-            'include-short-copyright': false
-          }
-        }).then(response => {
-          let api = response.data;
-          let apiInfo = {
-            chapter: api.canonical,
-            verses: api.passages[0],
-            next_chapter: api.passage_meta[0].next_chapter[0] + '-' + api.passage_meta[0].next_chapter[1]
-          };
-          this.chapters.push(apiInfo)
-          this.next_chapter = apiInfo.next_chapter;
-        })
-      },
-
       getBookChapter(bookName, bookChapter) {
         const bookQuery = bookName + bookChapter;
+        const url = `/.netlify/functions/getBook?parameter=${bookQuery}`;
         console.log(bookQuery) 
-        axios.get(`
-        https://api.esv.org/v3/passage/html/?q=${bookQuery}`, {
-          headers: {
-            'Authorization': process.env.ESV_API_KEY
-          },
-          params: {
-            'include-footnotes': false,
-            'include-footnote-body': false,
-            'include-short-copyright': false
-          }
-        }).then(response => {
+        axios.get(url).then(response => {
           this.dataChapter = response.data
         }).catch(error => {
           this.errorMsg = 'Nope.'
