@@ -1,6 +1,5 @@
 require('dotenv').config();
 const axios = require('axios');
-const ESV_TOKEN = process.env.ESV_API_KEY
 
 exports.handler = function (event, context, callback) {
   const bookQuery = event.queryStringParameters.bookQuery;
@@ -8,7 +7,7 @@ exports.handler = function (event, context, callback) {
   
   axios.get(url, {
     headers: {
-        'Authorization': process.env.ESV_TOKEN
+        'Authorization': process.env.ESV_API_TOKEN
     },
     params: {
       'include-footnotes': false,
