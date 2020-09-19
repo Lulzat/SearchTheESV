@@ -97,14 +97,6 @@
         }
       }
     }
-    allPosts {
-      edges {
-        node {
-          Canonical
-          Passage
-        }
-      }
-    }
   }
 </page-query>
 
