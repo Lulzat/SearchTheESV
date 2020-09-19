@@ -4,7 +4,7 @@ const axios = require('axios');
 exports.handler = function (event, context, callback) {
     const passage = event.queryStringParameters.passage;
     console.log(passage)
-    const url = `https://api.esv.org/v3/passage/text/?q=${passage}`;
+    const url = `https://api.esv.org/v3/passage/text/?q=gen1:1`;
 
     axios.get(url, {
             headers: {
