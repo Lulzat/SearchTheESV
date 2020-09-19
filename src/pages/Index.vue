@@ -139,7 +139,7 @@
 
       getBookChapter(bookName, bookChapter) {
         const bookQuery = bookName + bookChapter;
-        const url = `/.netlify/functions/getBook?passage=${bookQuery}`;
+        const url = `/.netlify/functions/getBook?bookQuery=${bookQuery}`;
         console.log(bookQuery) 
         axios.get(url).then(response => {
           console.log(response)
