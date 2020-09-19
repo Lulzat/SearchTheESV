@@ -126,6 +126,7 @@
     methods: {
       search() {
         const url = `/.netlify/functions/searchPassage?parameter=${this.passage}`;
+        console.log(this.passage)
         Vue.axios.get(
           url).then(response => {
           this.data = response.data
