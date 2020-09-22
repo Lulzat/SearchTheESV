@@ -53,12 +53,13 @@
       </div>-->
       <div class="container is-fluid">
         <div class="select" v-for="book in $page.allBibleBooks.edges[0].node.books">
-          <select>
+          <select v-on:change="getBookChapter(book.Name, n)">
             <option>{{book.Name}}</option>
-            <option v-for="n in book.Chapters" v-on:change="getBookChapter(book.Name, n)">{{n}}</option>
+            <option v-for="n in book.Chapters">{{n}}</option>
           </select>
         </div>
       </div>
+
 
       <!-- Nav Results -->
       <div class="card" v-if="dataChapter.query">
