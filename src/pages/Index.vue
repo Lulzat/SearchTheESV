@@ -55,7 +55,7 @@
         <div class="select" v-for="book in $page.allBibleBooks.edges[0].node.books">
           <select>
             <option>{{book.Name}}</option>
-            <option v-for="n in book.Chapters" v-on:click="getBookChapter(book.Name, n)">{{n}}</option>
+            <option v-for="n in book.Chapters" v-on:change="getBookChapter(book.Name, n)">{{n}}</option>
           </select>
         </div>
       </div>
