@@ -17,13 +17,6 @@ export default function (Vue, { router, head, isClient }) {
     type: 'image/png',
     href: 'favicon.png'
   })
-  
-  head.link.push({
-    rel: 'stylesheet',
-    integrity: 'sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z',
-    href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css',
-    crossorigin: 'anonymous'
-  })
 
 }
 

@@ -43,19 +43,20 @@
         </div>
       </div>
 
-      <!-- Navigation -->
-      <div class="container">
-        <div class="row">
-          <div v-for="book in $page.allBibleBooks.edges[0].node.books" :key="book.Name">
-            <b-navbar-dropdown :label="book.Name" class="book-list col-12">
-              <ul class="d-flex flex-wrap">
-                <b-navbar-item v-for="n in book.Chapters" class="chapter-list">
-                  <li v-on:click="getBookChapter(book.Name, n)" type="is-primary" outlined class="list-group-item">{{ n }}
-                  </li>
-                </b-navbar-item>
-              </ul>
-            </b-navbar-dropdown>
-          </div>
+      <!-- Navigation 
+      <div class="dropdown " style="width: 100vw;">
+        <b-navbar-dropdown v-for="book in $page.allBibleBooks.edges[0].node.books" :key="book.Name" :label="book.Name" style="width: 25px;"> 
+          <b-navbar-item v-for="n in book.Chapters" v-on:click="getBookChapter(book.Name, n)" style="width: 25px;">
+            {{ n }}
+          </b-navbar-item>
+        </b-navbar-dropdown>
+      </div>-->
+      <div class="container is-fluid">
+        <div class="select" v-for="book in $page.allBibleBooks.edges[0].node.books">
+          <select>
+            <option>{{book.Name}}</option>
+            <option v-for="n in book.Chapters" v-on:click="getBookChapter(book.Name, n)">{{n}}</option>
+          </select>
         </div>
       </div>
 
@@ -117,7 +118,8 @@
         errorMsg: '',
         chapters: [],
         next_chapter: '1002001-1002025',
-        show : false
+        show : false,
+        selectedValues: []
       }
     },
     components: {
@@ -148,7 +150,13 @@
           this.errorMsg = 'Nope.'
           this.dataChapter = []
         })
+      },
+    enabled(array, index) {
+      for (let a=0; a<index; a++) {
+        if (!array[a]) return false;
       }
+      return true;
+    }
     },
     beforeMount() {
       this.getBookChapter("genesis", 1)
