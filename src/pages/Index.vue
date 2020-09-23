@@ -30,8 +30,7 @@
           </p>
         </header>
         <div class="card-content">
-          <div class="content">
-            {{ data.passages[0] }}
+          <div class="content" v-html="data.passages[0]">
           </div>
         </div>
       </div>
