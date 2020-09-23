@@ -9,6 +9,11 @@ exports.handler = function (event, context, callback) {
     axios.get(url, {
             headers: {
                 'Authorization': process.env.ESV_API_TOKEN
+            },
+            params: {
+                'include-footnotes': false,
+                'include-footnote-body': false,
+                'include-short-copyright': false
             }
         })
         .then(
