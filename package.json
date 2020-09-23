@@ -13,5 +13,6 @@
     "buefy": "^0.9.3",
     "gridsome": "^0.7.0",
     "vue-axios": "^2.1.5"
-  }
+  },
+  "devDependencies": {}
 }

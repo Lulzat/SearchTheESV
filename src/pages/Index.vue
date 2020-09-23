@@ -51,14 +51,30 @@
           </b-navbar-item>
         </b-navbar-dropdown>
       </div>-->
-      <div class="container is-fluid">
+      <!--<div class="container is-fluid">
         <div class="select" v-for="book in $page.allBibleBooks.edges[0].node.books">
           <select>
             <option>{{book.Name}}</option>
             <option v-for="n in book.Chapters" v-on:click="getBookChapter(book.Name, n)">{{n}}</option>
           </select>
         </div>
+      </div> -->
+      
+      <div class="container is-fluid">
+        <div class="select">
+          <select v-model="selectedBook">
+            <option v-for="book in $page.allBibleBooks.edges[0].node.books" v-bind:value="book">{{book.Name}}
+            </option>
+          </select>
+        </div>
+        <div class="select">
+          <select v-model="selectedChapter" class="form-control" :required="true">
+            <option v-for="chapter in selectedBook.Chapters" v-bind:value="chapter">{{ chapter }}</option>
+          </select>
+        </div>
+        <b-button type="is-primary" v-on:click="getBookChapter(selectedBook.Name, selectedChapter)" outlined>Get Chapter!</b-button>
       </div>
+
 
       <!-- Nav Results -->
       <div class="card" v-if="dataChapter.query">
@@ -119,7 +135,11 @@
         chapters: [],
         next_chapter: '1002001-1002025',
         show : false,
-        selectedValues: []
+        selectedBook: {
+        "Name": "Genesis",
+        "Chapters": 50
+        },
+        selectedChapter: 1
       }
     },
     components: {
