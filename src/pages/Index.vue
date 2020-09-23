@@ -24,11 +24,6 @@
 
       <!-- Search Results Card -->
       <div class="card" v-if="data.query">
-        <header class="card-header">
-          <p class="card-header-title">
-            {{ data.query }}
-          </p>
-        </header>
         <div class="card-content">
           <div class="content" v-html="data.passages[0]">
           </div>
@@ -153,7 +148,7 @@
           console.log(response)
           this.data = response.data
         }).catch(error => {
-          this.errorMsg = 'Nope.'
+          this.errorMsg = 'No Results Found'
           this.data = []
         })
       },
@@ -166,7 +161,7 @@
           console.log(response)
           this.dataChapter = response.data
         }).catch(error => {
-          this.errorMsg = 'Nope.'
+          this.errorMsg = 'No Results Found (How did this one happen?)'
           this.dataChapter = []
         })
       },
